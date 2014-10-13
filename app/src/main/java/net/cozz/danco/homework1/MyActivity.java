@@ -49,23 +49,28 @@ public class MyActivity extends Activity implements OnClickListener {
     @Override
     public void onClick(View v) {
         TextView tv = (TextView)findViewById(R.id.textView1);
+        tv.setText(v.getTag().toString());  //need to set the android:tag attribute in the activity_my.xml
 
         switch (v.getId()) {
             case R.id.view1:
                 v.setSelected(true);
-                tv.setText("Red");
+//                tv.setText("Red");
+                tv.setTextColor(getResources().getColor(R.color.red));
                 break;
             case R.id.view2:
                 v.setSelected(true);
-                tv.setText("Green");
+//                tv.setText("Green");
+                tv.setTextColor(getResources().getColor(R.color.green));
                 break;
             case R.id.view3:
                 v.setSelected(true);
-                tv.setText("Blue");
+//                tv.setText("Blue");
+                tv.setTextColor(getResources().getColor(R.color.blue));
                 break;
             case R.id.view4:
                 v.setSelected(true);
-                tv.setText("Black");
+//                tv.setText("Black");
+                tv.setTextColor(getResources().getColor(R.color.black));
                 break;
         }
     }
